@@ -1,0 +1,20 @@
+type Query {
+    videoList: [Video]
+    creatorById(id: Int): Creator
+}
+
+type Video {
+    id: Int
+    name: String
+    url: String
+    description: String
+    datePublication: String
+    creator: Creator
+}
+
+type Creator {
+    id: Int
+    name: String
+    email: String
+    videoList: [Video]
+}
